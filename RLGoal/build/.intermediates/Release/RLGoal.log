@@ -1,0 +1,228 @@
+﻿  pch.cpp
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\linmath.h(56,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\linmath.h(57,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\linmath.h(58,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\linmath.h(341,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\linmath.h(372,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\linmath.h(372,16): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\wrapperstructs.h(61,14): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\wrapperstructs.h(107,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\wrapperstructs.h(111,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\wrapperstructs.h(112,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\wrapperstructs.h(304,46): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\wrapperstructs.h(305,94): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\wrapperstructs.h(316,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\wrapperstructs.h(317,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\wrapperstructs.h(318,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\wrapperstructs.h(319,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\cvarwrapper.h(20,2): warning C4251: 'CVarWrapper::pimpl': class 'std::unique_ptr<CVarWrapper::Impl,std::default_delete<CVarWrapper::Impl>>' needs to have dll-interface to be used by clients of class 'CVarWrapper'
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\cvarwrapper.h(20): message : see declaration of 'std::unique_ptr<CVarWrapper::Impl,std::default_delete<CVarWrapper::Impl>>'
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\CVarManagerWrapper.h(37,29): warning C4251: 'CVarManagerWrapper::pimpl': class 'std::unique_ptr<CVarManagerWrapper::Impl,std::default_delete<CVarManagerWrapper::Impl>>' needs to have dll-interface to be used by clients of class 'CVarManagerWrapper'
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\wrappers\CVarManagerWrapper.h(37): message : see declaration of 'std::unique_ptr<CVarManagerWrapper::Impl,std::default_delete<CVarManagerWrapper::Impl>>'
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\plugin\bakkesmodplugin.h(61,51): warning C4251: 'BakkesMod::Plugin::BakkesModPlugin::cvarManager': class 'std::shared_ptr<CVarManagerWrapper>' needs to have dll-interface to be used by clients of class 'BakkesMod::Plugin::BakkesModPlugin'
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\plugin\bakkesmodplugin.h(61): message : see declaration of 'std::shared_ptr<CVarManagerWrapper>'
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\plugin\bakkesmodplugin.h(62,44): warning C4251: 'BakkesMod::Plugin::BakkesModPlugin::gameWrapper': class 'std::shared_ptr<GameWrapper>' needs to have dll-interface to be used by clients of class 'BakkesMod::Plugin::BakkesModPlugin'
+C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\include\bakkesmod\plugin\bakkesmodplugin.h(62): message : see declaration of 'std::shared_ptr<GameWrapper>'
+  imgui.cpp
+  imguivariouscontrols.cpp
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.h(49,58): warning C4305: 'argument': truncation from 'double' to 'float'
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.h(49,103): warning C4305: 'argument': truncation from 'double' to 'float'
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.h(74,93): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.h(544,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.h(544,1): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(110,149): warning C4305: 'argument': truncation from 'double' to 'float'
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(110,175): warning C4305: 'argument': truncation from 'double' to 'float'
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(110,195): warning C4305: 'argument': truncation from 'double' to 'float'
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(228,86): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(229,45): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(229,29): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(303,26): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(304,26): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(363,101): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(412,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(413,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(414,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(415,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(770,68): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(770,68): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(771,42): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(1354,44): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(1354,40): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(1378,32): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(1378,28): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(1459,65): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(1544,54): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(1544,24): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(1849,32): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(1853,34): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(1860,35): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(2223,47): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(2223,47): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(2276,49): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(2285,135): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(2285,49): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(2286,74): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(2286,49): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(2376,51): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(2413,63): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(2550,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(2550,1): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(3459,79): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(3460,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(3782,39): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(3807,22): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(4035,31): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(4036,73): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(4040,44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(4045,39): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imguivariouscontrols.cpp(4053,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  imgui_additions.cpp
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_additions.cpp(9,46): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_additions.cpp(16,46): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx11.cpp
+  imgui_impl_win32.cpp
+  imgui_rangeslider.cpp
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(302,25): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImS32
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(387): message : see reference to function template instantiation 'bool ImGui::RangeSliderBehaviorT<ImS32,ImS32,float>(const ImRect &,ImGuiID,ImGuiDataType,TYPE *,TYPE *,const TYPE,const TYPE,const char *,float,ImGuiSliderFlags,ImRect *,ImRect *)' being compiled
+          with
+          [
+              TYPE=ImS32
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(302,48): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImS32
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(329,30): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImS32
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(329,52): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImS32
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(302,25): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImU32
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(399): message : see reference to function template instantiation 'bool ImGui::RangeSliderBehaviorT<ImU32,ImS32,float>(const ImRect &,ImGuiID,ImGuiDataType,TYPE *,TYPE *,const TYPE,const TYPE,const char *,float,ImGuiSliderFlags,ImRect *,ImRect *)' being compiled
+          with
+          [
+              TYPE=ImU32
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(302,48): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImU32
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(329,30): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImU32
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(329,52): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImU32
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(302,25): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImS64
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(439): message : see reference to function template instantiation 'bool ImGui::RangeSliderBehaviorT<ImS64,ImS64,double>(const ImRect &,ImGuiID,ImGuiDataType,TYPE *,TYPE *,const TYPE,const TYPE,const char *,float,ImGuiSliderFlags,ImRect *,ImRect *)' being compiled
+          with
+          [
+              TYPE=ImS64
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(302,48): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImS64
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(329,30): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImS64
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(329,52): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImS64
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(302,25): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImU64
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(442): message : see reference to function template instantiation 'bool ImGui::RangeSliderBehaviorT<ImU64,ImS64,double>(const ImRect &,ImGuiID,ImGuiDataType,TYPE *,TYPE *,const TYPE,const TYPE,const char *,float,ImGuiSliderFlags,ImRect *,ImRect *)' being compiled
+          with
+          [
+              TYPE=ImU64
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(302,48): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImU64
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(329,30): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImU64
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(329,52): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=ImU64
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(302,25): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=double
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(448): message : see reference to function template instantiation 'bool ImGui::RangeSliderBehaviorT<double,double,double>(const ImRect &,ImGuiID,ImGuiDataType,TYPE *,TYPE *,const TYPE,const TYPE,const char *,float,ImGuiSliderFlags,ImRect *,ImRect *)' being compiled
+          with
+          [
+              TYPE=double
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(302,48): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=double
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(329,30): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=double
+          ]
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\imgui\imgui_rangeslider.cpp(329,52): warning C4244: 'argument': conversion from 'TYPE' to 'float', possible loss of data
+          with
+          [
+              TYPE=double
+          ]
+  imgui_searchablecombo.cpp
+  imgui_timeline.cpp
+  imgui_widgets.cpp
+  RLGoal.cpp
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\HTTPRequest\include\HTTPRequest.hpp(216,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\HTTPRequest\include\HTTPRequest.hpp(223,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\HTTPRequest\include\HTTPRequest.hpp(486,26): warning C4101: 'tempBuffer': unreferenced local variable
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\RLGoal.cpp(42,34): warning C4101: 'e': unreferenced local variable
+\\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\RLGoal\RLGoal.cpp(56,34): warning C4101: 'e': unreferenced local variable
+  RLGoalGUI.cpp
+     Creating library \\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\plugins\RLGoal.lib and object \\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\plugins\RLGoal.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 668 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  RLGoal.vcxproj -> \\jaws\data\Dallin\Projects\RocketLeague Goal Ball\Code\RLGoal\plugins\RLGoal.dll
+  C:/Program Files (x86)/Steam/steamapps/common/rocketleague/Binaries/Win64/bakkesmod/plugins/RLGoal.dll
