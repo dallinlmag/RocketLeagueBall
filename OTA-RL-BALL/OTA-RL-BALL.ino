@@ -2,7 +2,7 @@
 #include <ESP8266mDNS.h>
 #include <WiFiUdp.h>
 #include <ArduinoOTA.h>
-#include <RGBDigital.h>
+#include <RgbLed.h>
 #include <WiFiClient.h>
 
 //ESP Web Server Library to host a web page
@@ -18,15 +18,21 @@ void handleLEDon();
 void handleALLoff();
 void handleGoal();
 void handleWin();
-void handleWait();
+void handleFade();
+void wait();
+
 
 const char* ssid = STASSID;
 const char* password = STAPSK;
 ESP8266WebServer server(80); //Server on port 80
+bool OTA_Enabled = true;
 
-RGBDigital ledR(1,3,5,COMMON_TYPE::ANODE);
-RGBDigital ledL(4,0,2,COMMON_TYPE::ANODE);
-RGBDigital led3(13,12,14,COMMON_TYPE::ANODE);
+const int NUM_LEDS = 3;
+RgbLed leds[3] {RgbLed(1,3,5,COMMON_TYPE::ANODE), RgbLed(4,0,2,COMMON_TYPE::ANODE), RgbLed(13,12,14,COMMON_TYPE::ANODE) };
+
+RgbLed ledR(1,3,5,COMMON_TYPE::ANODE);
+RgbLed ledL(4,0,2,COMMON_TYPE::ANODE);
+RgbLed led3(13,12,14,COMMON_TYPE::ANODE);
 
 void setup() {
   Serial.begin(115200);
@@ -87,16 +93,24 @@ void setup() {
   server.on("/alloff", handleALLoff);
   server.on("/goal", handleGoal);
   server.on("/win", handleWin);
-  server.on("/wait", handleWait);
+  server.on("/fade", handleFade);
+  server.on("/ota", [](){OTA_Enabled = !OTA_Enabled;});
 
   server.begin();                  //Start server
   
 }
 
 void loop() {
-  ArduinoOTA.handle();
   server.handleClient();          //Handle client requests
-  //demoColors();
+  if (OTA_Enabled)
+  {
+    ArduinoOTA.handle();
+    fadeWait(1000);
+  }
+  else
+  {
+    fadeWait(500);
+  }
 }
 
 //===============================================================
@@ -110,13 +124,15 @@ void handleRoot() {
 <body>
 <center>
 <h1>ROCKET LEAGUE LED BALL</h1><br>
-Ciclk to turn <a href="allon" target="myIframe">LED ON</a><br>
-Ciclk to turn <a href="alloff" target="myIframe">LED OFF</a><br>
-Ciclk to score a goal <a href="goal" target="myIframe">GOAL</a><br>
-Ciclk to win <a href="win" target="myIframe">WIN</a><br>
+Click to turn <a href="allon" target="myIframe">LED ON</a><br>
+Click to turn <a href="alloff" target="myIframe">LED OFF</a><br>
+Click to score a goal <a href="goal" target="myIframe">GOAL</a><br>
+Click to win <a href="win" target="myIframe">WIN</a><br>
+Click to fade <a href="fade" target="myIframe">FADE</a><br>
+Click to enable/disable OTA <a href="ota" target="myIframe">OTA</a><br>
 LED State:<iframe name="myIframe" width="100" height="25" frameBorder="0"><br>
 <hr>
-
+<hr>
 </center>
 
 </body>
@@ -151,38 +167,40 @@ void handleALLoff() {
 
 void handleWin(){
   for (int i = 0; i < 20; i++){
-    ledR.setColor(0,255,0);
-    ledL.setColor(0,255,0);
-    led3.setColor(0,255,0);
+    setLEDs(leds, colors[GREEN], NUM_LEDS);
     delay(100);
-    ledR.setColor(0,0,0);
-    ledL.setColor(0,0,0);
-    led3.setColor(0,0,0);
+    setLEDs(leds, colors[WHITE], NUM_LEDS);
     delay(100);
   }
-  handleWait();
 }
 
 void handleGoal(){
-  for (int i = 0; i < 20; i++){
-    ledR.setColor(0,0,0);
-    ledL.setColor(0,0,255);
-    led3.setColor(255,255,0);
-    delay(100);
-    ledR.setColor(0,255,255);
-    ledL.setColor(0,0,0);
-    led3.setColor(0,0,255);
-    delay(100);
-    ledR.setColor(0,0,255);
-    ledL.setColor(0,255,255);
-    led3.setColor(0,0,0);
+  for (int i = 0; i < 50; i++){
+    ledR.setColor(colors[random(0,7)]);
+    ledL.setColor(colors[random(0,7)]);
+    led3.setColor(colors[random(0,7)]);
     delay(100);
   }
-  handleWait();
 }
 
-void handleWait(){
-  ledR.off();
-  ledL.off();
-  led3.off();
+void handleFade()
+{
+  setLEDs(leds, colors[RED], NUM_LEDS);
+  for (auto i = 0; i < 6; i++)
+  {
+    delay(1000);
+    fadeLEDs(leds, colors[i], colors[i+1], 2000, NUM_LEDS);
+  }
+}
+
+int currentColor = 0;
+void wait(){
+  setLEDs(leds, colors[currentColor], NUM_LEDS);
+  currentColor = (currentColor+1)%7;
+}
+
+void fadeWait(int duration)
+{
+   fadeLEDs(leds, colors[currentColor], colors[(currentColor+1)%7], duration, NUM_LEDS, MEDIUM_B);
+   currentColor = (currentColor+1)%7;
 }
