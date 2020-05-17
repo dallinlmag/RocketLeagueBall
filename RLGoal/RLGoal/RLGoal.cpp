@@ -36,12 +36,12 @@ void RLGoal::gameEnded() {
     try
     {
         cvarManager->log("Game ended Recorded");
-        http::Request goalRequest("<IP_ADDRESS>/win");
+        http::Request goalRequest("192.168.1.88/win");
         goalRequest.send();
     }
     catch (const std::exception& e)
     {
-        cvarManager->log("The goalrequest failed...");
+        cvarManager->log("The win message request failed...");
     }
 }
 
@@ -50,12 +50,12 @@ void RLGoal::goalScored() {
     try
     {
         cvarManager->log("Goal Recorded");
-        http::Request goalRequest("<IP_ADDRESS>/goal");
+        http::Request goalRequest("192.168.1.88/goal");
         goalRequest.send();
     }
     catch (const std::exception& e)
     {
-        cvarManager->log("The goalrequest failed...");
+        cvarManager->log("The goal message request failed...");
     }
 }
 

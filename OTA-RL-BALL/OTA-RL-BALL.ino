@@ -143,25 +143,18 @@ LED State:<iframe name="myIframe" width="100" height="25" frameBorder="0"><br>
 
 void handleLEDon() { 
  Serial.println("LED on page");
- ledR.setColor(0,255,0);
- ledL.setColor(0,255,0);
- led3.setColor(0,255,0);
+ setLEDs(leds, colors[RED], NUM_LEDS);
  delay(1000);
- ledR.setColor(0,0,255);
- ledL.setColor(0,0,255);
- led3.setColor(0,0,255);
+ setLEDs(leds, colors[GREEN], NUM_LEDS);
  delay(1000);
- ledR.setColor(255,0,0);
- ledL.setColor(255,0,0);
- led3.setColor(255,0,0);
+ setLEDs(leds, colors[BLUE], NUM_LEDS);
+ delay(1000);
  server.send(200, "text/html", "ON"); //Send ADC value only to client ajax request
 }
 
 void handleALLoff() { 
  Serial.println("LED off page");
- ledR.off();
- ledL.off();
- led3.off();
+ setLEDs(leds, {0,0,0}, NUM_LEDS);
  server.send(200, "text/html", "OFF"); //Send ADC value only to client ajax request
 }
 
