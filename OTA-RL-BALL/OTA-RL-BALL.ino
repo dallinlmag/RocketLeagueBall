@@ -109,7 +109,7 @@ void loop() {
   }
   else
   {
-    fadeWait(500);
+    //fadeWait(100);
   }
 }
 
@@ -159,6 +159,7 @@ void handleALLoff() {
 }
 
 void handleWin(){
+  server.send(200, "text/html", "WIN"); 
   for (int i = 0; i < 20; i++){
     setLEDs(leds, colors[GREEN], NUM_LEDS);
     delay(100);
@@ -168,6 +169,7 @@ void handleWin(){
 }
 
 void handleGoal(){
+  server.send(200, "text/html", "GOAAAALLLLL"); 
   for (int i = 0; i < 50; i++){
     ledR.setColor(colors[random(0,7)]);
     ledL.setColor(colors[random(0,7)]);

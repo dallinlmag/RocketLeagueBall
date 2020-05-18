@@ -17,6 +17,7 @@ public:
 	void printPlayerData();
 	void goalScored();
 	void gameEnded();
+	void sendHTTP(std::string url);
 	ServerWrapper GetCurrentGameState();
 
 private:

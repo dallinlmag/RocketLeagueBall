@@ -31,32 +31,44 @@ void RLGoal::onLoad()
     //gameWrapper->HookEvent("Function TAGame.Team_TA.EventScoreUpdated", bind(&RLGoal::goalScored, this));
 }
 
-void RLGoal::gameEnded() {
-    //Quick and dirty send a message to a hard coded IP Address that a goal was scored...    
+void test()
+{
+    ///hello
+}
+// sendHTTP is meant to run on another thread to handle http calls to not slow, freeze, or crash the game
+void RLGoal::sendHTTP(std::string url)
+{
     try
     {
-        cvarManager->log("Game ended Recorded");
-        http::Request goalRequest("192.168.1.88/win");
-        goalRequest.send();
+        
+        http::Request request(url);
+
+        // send a get request
+        const http::Response response = request.send("GET");
+        cvarManager->log(std::string(response.body.begin(), response.body.end())); // print the result
     }
     catch (const std::exception& e)
     {
-        cvarManager->log("The win message request failed...");
+        cvarManager->log("Request failed, error: " + std::string(e.what()));
     }
 }
 
-void RLGoal::goalScored() {
-    //Quick and dirty send a message to a hard coded IP Address that a goal was scored...    
-    try
-    {
-        cvarManager->log("Goal Recorded");
-        http::Request goalRequest("192.168.1.88/goal");
-        goalRequest.send();
-    }
-    catch (const std::exception& e)
-    {
-        cvarManager->log("The goal message request failed...");
-    }
+void RLGoal::gameEnded() 
+{
+
+    cvarManager->log("Game ended Recorded");
+    std::thread httpThread(&RLGoal::sendHTTP, this, "192.168.1.88/win");
+    httpThread.detach();
+}
+
+void RLGoal::goalScored() 
+{
+    //Quick and dirty send a message to a hard coded IP Address that a goal was scored...  
+
+    cvarManager->log("goal Recorded");
+    std::thread httpThread(&RLGoal::sendHTTP, this, "192.168.1.88/goal");
+    httpThread.detach();
+
 }
 
 //OFF Limits until the API is fixed
