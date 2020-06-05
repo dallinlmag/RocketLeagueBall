@@ -1,10 +1,10 @@
 #include "pch.h"
-#include "RLGoal.h"
+#include "RLBall.h"
 #pragma comment(lib, "ws2_32.lib")
 #include "..\HTTPRequest\include\HTTPRequest.hpp"
 
 
-BAKKESMOD_PLUGIN(RLGoal, "RLBall", plugin_version, PLUGINTYPE_SPECTATOR)
+BAKKESMOD_PLUGIN(RLBall, "RLBall", plugin_version, PLUGINTYPE_SPECTATOR)
 
 //From CinderBlock
 int playerData[2][3][3]; //2 teams, 3 players, 3 data points: spectator shortcut, goals, assists
@@ -14,18 +14,18 @@ string playerWhoAssisted = "";
 bool playerGotHatTrick = false;
 
 
-void RLGoal::onUnload()
+void RLBall::onUnload()
 {
 }
 
-void RLGoal::startWatching() {
+void RLBall::startWatching() {
 }
 
-void RLGoal::onLoad()
+void RLBall::onLoad()
 {
 
-    gameWrapper->HookEvent("Function TAGame.Team_TA.EventScoreUpdated", bind(&RLGoal::goalScored, this));
-    gameWrapper->HookEvent("Function TAGame.GameEvent_Soccar_TA.EventMatchEnded", bind(&RLGoal::gameEnded, this));
+    gameWrapper->HookEvent("Function TAGame.Team_TA.EventScoreUpdated", bind(&RLBall::goalScored, this));
+    gameWrapper->HookEvent("Function TAGame.GameEvent_Soccar_TA.EventMatchEnded", bind(&RLBall::gameEnded, this));
 
     //hook the goal scored event and call a function to get assists and goals
     //gameWrapper->HookEvent("Function TAGame.Team_TA.EventScoreUpdated", bind(&RLGoal::goalScored, this));
@@ -36,7 +36,7 @@ void test()
     ///hello
 }
 // sendHTTP is meant to run on another thread to handle http calls to not slow, freeze, or crash the game
-void RLGoal::sendHTTP(std::string url)
+void RLBall::sendHTTP(std::string url)
 {
     try
     {
@@ -53,26 +53,26 @@ void RLGoal::sendHTTP(std::string url)
     }
 }
 
-void RLGoal::gameEnded() 
+void RLBall::gameEnded() 
 {
 
     cvarManager->log("Game ended Recorded");
-    std::thread httpThread(&RLGoal::sendHTTP, this, "192.168.1.88/win");
+    std::thread httpThread(&RLBall::sendHTTP, this, "192.168.1.88/win");
     httpThread.detach();
 }
 
-void RLGoal::goalScored() 
+void RLBall::goalScored() 
 {
     //Quick and dirty send a message to a hard coded IP Address that a goal was scored...  
 
     cvarManager->log("goal Recorded");
-    std::thread httpThread(&RLGoal::sendHTTP, this, "192.168.1.88/goal");
+    std::thread httpThread(&RLBall::sendHTTP, this, "192.168.1.88/goal");
     httpThread.detach();
 
 }
 
 //OFF Limits until the API is fixed
-void RLGoal::getPlayerIDs()
+void RLBall::getPlayerIDs()
 {
     if (gameWrapper->IsInOnlineGame())
     {
@@ -155,7 +155,7 @@ void RLGoal::getPlayerIDs()
 //    }
 //}
 
-void RLGoal::printGameData(ArrayWrapper<TeamWrapper> teams) {
+void RLBall::printGameData(ArrayWrapper<TeamWrapper> teams) {
     for (int i = 0; i < 2; i++) //Each team
     {
         teams.Get(i).GetTeamName();
@@ -186,7 +186,7 @@ void RLGoal::printGameData(ArrayWrapper<TeamWrapper> teams) {
     }
 }
 
-ServerWrapper RLGoal::GetCurrentGameState()
+ServerWrapper RLBall::GetCurrentGameState()
 {
     if (gameWrapper->IsInReplay())
         return gameWrapper->GetGameEventAsReplay().memory_address;

@@ -30,10 +30,6 @@ bool OTA_Enabled = true;
 const int NUM_LEDS = 3;
 RgbLed leds[3] {RgbLed(1,3,5,COMMON_TYPE::ANODE), RgbLed(4,0,2,COMMON_TYPE::ANODE), RgbLed(13,12,14,COMMON_TYPE::ANODE) };
 
-RgbLed ledR(1,3,5,COMMON_TYPE::ANODE);
-RgbLed ledL(4,0,2,COMMON_TYPE::ANODE);
-RgbLed led3(13,12,14,COMMON_TYPE::ANODE);
-
 void setup() {
   Serial.begin(115200);
   Serial.println("Booting");
@@ -171,9 +167,9 @@ void handleWin(){
 void handleGoal(){
   server.send(200, "text/html", "GOAAAALLLLL"); 
   for (int i = 0; i < 50; i++){
-    ledR.setColor(colors[random(0,7)]);
-    ledL.setColor(colors[random(0,7)]);
-    led3.setColor(colors[random(0,7)]);
+    leds[0].setColor(colors[random(0,7)]);
+    leds[1].setColor(colors[random(0,7)]);
+    leds[2].setColor(colors[random(0,7)]);
     delay(100);
   }
 }

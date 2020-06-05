@@ -15,6 +15,7 @@
     <ProjectGuid>{DCCD0DFF-A3DB-4C34-956A-74378DCA464D}</ProjectGuid>
     <RootNamespace>RLGoal</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>RLBall</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -104,8 +105,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="RLGoal.cpp" />
-    <ClCompile Include="RLGoalGUI.cpp" />
+    <ClCompile Include="RLBall.cpp" />
+    <ClCompile Include="RLBallGUI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="imgui\imconfig.h" />
@@ -122,7 +123,7 @@
     <ClInclude Include="imgui\imstb_textedit.h" />
     <ClInclude Include="imgui\imstb_truetype.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="RLGoal.h" />
+    <ClInclude Include="RLBall.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -5,7 +5,7 @@
 
 constexpr auto plugin_version = "1.0";
 
-class RLGoal: public BakkesMod::Plugin::BakkesModPlugin/*, public BakkesMod::Plugin::PluginWindow*/
+class RLBall: public BakkesMod::Plugin::BakkesModPlugin/*, public BakkesMod::Plugin::PluginWindow*/
 {
 
 public:

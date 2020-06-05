@@ -24,9 +24,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="RLGoal.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -63,14 +60,14 @@
     <ClCompile Include="imgui\imguivariouscontrols.cpp">
       <Filter>imgui\implementation</Filter>
     </ClCompile>
-    <ClCompile Include="RLGoalGUI.cpp">
+    <ClCompile Include="RLBall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RLBallGUI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RLGoal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -112,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="imgui\imgui_internal.h">
       <Filter>imgui\headers</Filter>
+    </ClInclude>
+    <ClInclude Include="RLBall.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

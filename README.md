@@ -59,7 +59,7 @@ There are really just two things happening.
 3. Select the right port under **Tools->Port**, you may only have one option.
 4. With the setup done, you should be able to write the code to the board. Press the Arrow in the top left to compile and write the sketch to the board.   
 
-Some common issues might be theat the path isn't found for the library or the other headers. Just make sure you followed the previous steps. If there is another issue, reach out to me or tag an issue in the repo.
+Some common issues might be theat the path isn't found for the library or the other headers. Just make sure you followed the previous steps. If there is another issue, reach out to me or tag an issue in the repo. Just make sure to be plugged into the computer when making major changes, because if you break the OTA feature, you have to plugin.
 <br />  
 
 Once the code is loaded, the arduino should be ready to go. The ball should be glowing, and connected to WIFI. If not, Make sure the WIFI and password are correct. There should also be a valid webpage to navigate to from your computer. You will have to find what the IP address is, or you can set it manually in the arduino sketch. I used my Router, so I didn't worry about it. 
@@ -76,7 +76,7 @@ Now that it's loaded, let's talk about how it works. The links on the page are r
 <li> **FADE** This fades the lights through the main colors (Good for testing, but somewhat obsolete because now it happens anyway)
 <li> **OTA** This button will deactivate the Over the air update system. I added this because I was under the impression that it can cause the communication from Rocket league to the arduino to fail. I am not sure, but I did this just in case. It will also speed up the fade animation so you know what mode it is in.</li> 
 <br />
-Use the webpage to ~~play~~ test that the system works, then we will move on to the Rocket League plugin.
+Use the webpage to <s>play</s> test that the system works, then we will move on to the Rocket League plugin.
 
 ### 3. The Plugin
 
@@ -85,9 +85,14 @@ The plugin is a dll that will get loaded into Rocket league by Bakkesmod.
 First, you need [Bakkesmod](https://bakkesmod.com/)
 
 Then, you need the [BakkesModSDK](https://github.com/bakkesmodorg/BakkesModSDK). It should be included in the bakkesmod files already. The linked version, should however, be more up to date.
-<br /> 
-
 
 I will admit, I haven't put as much time into the plugin part, which, ironically will be the most powerful going forward to integrate into other systems. But with the included project, building and deploying shouldn't be too bad. 
 
-1. 
+1. Update the IP address in **RLBall.cpp** to match your arduino. It should be on line **39** and **53**, but could move.
+2. The file **bakkes_patchplugin.py** in the BakkesModSDK folder, for me it is here: 
+   ```("C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\")```
+Change line **13** to your bakkesmod plugin folder. I included the file in the repo, but it is really a one line change.
+4. Set the build type to **Release** and **x64**. 
+5. Build the Solution. There is a post-build event to send the updated plugin to the plugin folder. If it all builds successfully, it should automatically load when Rocket league is launched or it will reload if Rocket league is already running.
+
+Jump in a custom online game and try it out. **F6** opens the console
