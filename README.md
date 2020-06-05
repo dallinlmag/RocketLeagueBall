@@ -89,10 +89,12 @@ Then, you need the [BakkesModSDK](https://github.com/bakkesmodorg/BakkesModSDK).
 I will admit, I haven't put as much time into the plugin part, which, ironically will be the most powerful going forward to integrate into other systems. But with the included project, building and deploying shouldn't be too bad. 
 
 1. Update the IP address in **RLBall.cpp** to match your arduino. It should be on line **39** and **53**, but could move.
-2. The file **bakkes_patchplugin.py** in the BakkesModSDK folder, for me it is here: 
-   ```("C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\")```
+2. The file **bakkes_patchplugin.py** in the BakkesModSDK folder, for me it is here:
+```("C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win64\bakkesmod\bakkesmodsdk\")```
 Change line **13** to your bakkesmod plugin folder. I included the file in the repo, but it is really a one line change.
 4. Set the build type to **Release** and **x64**. 
 5. Build the Solution. There is a post-build event to send the updated plugin to the plugin folder. If it all builds successfully, it should automatically load when Rocket league is launched or it will reload if Rocket league is already running.
 
 Jump in a custom online game and try it out. **F6** opens the console
+
+To check and make sure the plugin is loaded, use the console and run  ```plugin list```. If RLBall is not in the list, run ```plugin load rlball```. This will force the game to load the plugin.
